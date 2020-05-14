@@ -15,13 +15,13 @@ public class MyController {
     @GetMapping(path = "/users")
     public String getUsers(Model model) {
         model.addAttribute("users", userRepository.findAll());
-        return "users";
+        return "users.html";
     }
 
     @GetMapping(path = "groups")
     public String getGroups(Model model) {
         model.addAttribute("groups", groupRepository.findAll());
-        return "mygroups";
+        return "mygroups.html";
     }
 
     public MyController(UserRepository userRepository, GroupRepository groupRepository) {
